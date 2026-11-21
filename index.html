@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой рабочий стол (ОВ-П)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="shapka">
+            <h1>Моя Рабочая Пространство</h1>
+            <p>Все данные сохраняются автоматически</p>
+        </div>
+
+        <div class="vkladki">
+            <button class="tab-btn active" id="btnZadacha">Мои задачи</button>
+            <button class="tab-btn" id="btnShag">Трекер шагов</button>
+            <button class="tab-btn" id="btnNotes">Заметки</button>
+        </div>
+
+        <div class="tab-content" id="vkladkaZadacha">
+            <h2>Список дел</h2>
+            <div class="input-group">
+                <input type="text" id="zadachaInput" placeholder="Введите новую задачу...">
+                <button id="addZadachaBtn">Добавить</button>
+            </div>
+            <div id="spisokZadacha" class="list-area"></div>
+        </div>
+
+        <div class="tab-content hidden" id="vkladkaShag">
+            <h2>Трекер шагов</h2>
+            <div class="balance-box">
+                Сумма ваших шагов: <span id="sumShag">0</span> шагов
+            </div>
+            <div class="input-group">
+                <input type="text" id="marshrut" placeholder="маршрут или прогулка">
+                <input type="number" id="kolShag" placeholder="количество шагов">
+                <button id="addMarshrutBtn">Записать</button>
+            </div>
+            <div id="spisokMarshrut" class="list-area"></div>
+        </div>
+
+        <div class="tab-content hidden" id="vkladkaNotes">
+            <h2>Личный блокнот</h2>
+            <textarea id="noteZametka" placeholder="Пишите здесь любые мысли... Они сохранятся сами!"></textarea>
+            <p class="status-text" id="noteStatus">Сохранено в браузере</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
